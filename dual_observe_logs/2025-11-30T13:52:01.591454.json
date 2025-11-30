@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-11-30T13:52:01.591368",
+  "input": "i am a watch",
+  "pre": {
+    "delta_psi": 0.24,
+    "delta_phi": 0.97,
+    "R": 0.88,
+    "kappa": 0.674,
+    "d_s": 0,
+    "d_o": 0
+  },
+  "collapse": "stable",
+  "outcome": {
+    "s": 0,
+    "o": 1
+  },
+  "post": {
+    "delta_psi": 0.28,
+    "delta_phi": 1.8,
+    "R": 0.86,
+    "kappa": 0.424,
+    "d_s": 0,
+    "d_o": 1
+  },
+  "version": "dual_observe v2.3"
+}
