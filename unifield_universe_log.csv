@@ -1,1 +1,2 @@
 timestamp,step,text,t,a,curvature,x0,y0,energy_density,temperature,mode,outcome,p00,p01,p10,p11,gamma,S_ent
+2025-11-30T15:44:35.411806,1,歩く,0.442415,1.014344,-0.001279,-0.073531,-0.009688,0.958174,0.985859,collapsed,01,0.100292,0.800146,0.086802,0.012761,0.16708,0.256563
