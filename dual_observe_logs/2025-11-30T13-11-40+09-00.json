@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-11-30T13:11:40+09:00",
+  "version": "dual_observe v0.3 text→quantum",
+  "input_text": "i am a pen",
+  "text_analysis": {
+    "text_length": 10,
+    "tension": 0.0,
+    "clarity": 1.0,
+    "ex_count": 0,
+    "dots_count": 0
+  },
+  "observer_state_2q": {
+    "basis": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "state_vector": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "object_state_1q": {
+    "basis": [
+      "0",
+      "1"
+    ],
+    "state_vector": [
+      [
+        6.123233995736766e-17,
+        0.0
+      ],
+      [
+        0.7071067811865476,
+        -0.7071067811865475
+      ]
+    ]
+  },
+  "metrics": {
+    "delta_psi": 0.9999999999999999,
+    "delta_phi": 0.0,
+    "R": 6.123233995736766e-17,
+    "kappa": 0.5
+  }
+}
