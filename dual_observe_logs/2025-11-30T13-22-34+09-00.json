@@ -1,0 +1,98 @@
+{
+  "timestamp": "2025-11-30T13:22:34+09:00",
+  "version": "dual_observe v0.4 pure-measurement",
+  "input_text": "this is it",
+  "text_analysis": {
+    "text_length": 10,
+    "tension": 0.0,
+    "clarity": 1.0,
+    "ex_count": 0,
+    "dots_count": 0
+  },
+  "observer_state_2q_full": {
+    "basis": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "state_vector": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "pre": {
+    "observer_effective_1q": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "object_1q": [
+      [
+        6.123233995736766e-17,
+        0.0
+      ],
+      [
+        0.7071067811865476,
+        -0.7071067811865475
+      ]
+    ],
+    "metrics": {
+      "delta_psi": 0.9999999999999999,
+      "delta_phi": 0.0,
+      "R": 6.123233995736766e-17,
+      "kappa": 0.5
+    }
+  },
+  "measurement": {
+    "observer": 0,
+    "object": 1
+  },
+  "post": {
+    "observer_effective_1q": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "object_1q": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ]
+    ],
+    "metrics": {
+      "delta_psi": 1.0,
+      "delta_phi": 0.0,
+      "R": 0.0,
+      "kappa": 0.5
+    }
+  }
+}
