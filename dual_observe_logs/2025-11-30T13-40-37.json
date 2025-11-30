@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-11-30T13:40:37.200757",
+  "input": "i am a pen",
+  "pre": {
+    "delta_psi": 0.7664899920800232,
+    "delta_phi": 0.08812593776843244,
+    "R": 0.7899999999999999,
+    "kappa": 0.7657211369567194,
+    "B": 0.0,
+    "lambda": 0.8999999999999999,
+    "tau": 0.12435300177159621,
+    "raw": {
+      "length": 10,
+      "unique_chars": 7,
+      "exclaim": 0,
+      "question": 0,
+      "dots": 0,
+      "spaces": 3
+    }
+  },
+  "outcome": {
+    "s": 0,
+    "o": 1
+  },
+  "post": {
+    "delta_psi": 0.24708977389708384,
+    "delta_phi": 0.5958729766206639,
+    "R": 0.7846153846153845,
+    "kappa": 0.7187966511571355,
+    "B": 0.0,
+    "lambda": 0.8999999999999999,
+    "tau": 0.1610846096413192,
+    "raw": {
+      "length": 13,
+      "unique_chars": 9,
+      "exclaim": 0,
+      "question": 0,
+      "dots": 0,
+      "spaces": 4
+    }
+  },
+  "version": "dual_observe v2.0 full-dim"
+}
