@@ -1,0 +1,96 @@
+import csv, os, math, random
+from datetime import datetime
+
+LOG_FILE = "unfield_universe_log.csv"
+
+# ---------- 初期化 ----------
+def init_log():
+    if not os.path.exists(LOG_FILE):
+        with open(LOG_FILE, "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow([
+                "timestamp","step","t","a","curv",
+                "x0","y0","xs","ys","delta",
+                "gamma","S","mode","fate"
+            ])
+
+# ---------- 宇宙モデル（v6.0 簡約版） ----------
+state = {
+    "step": 0,
+    "t": 0.0,
+    "a": 1.0,
+    "x0": 0.0, "y0": 0.0,
+    "xs": 0.0, "ys": 0.0
+}
+
+def step_universe():
+    state["step"] += 1
+
+    # time
+    state["t"] += random.uniform(0.4, 1.2)
+
+    # expansion
+    state["a"] *= random.uniform(0.97, 1.03)
+
+    # curvature
+    curv = -(state["a"] - 1.0) + random.uniform(-0.01, 0.01)
+
+    # objective world
+    state["x0"] += random.uniform(-0.03, 0.03)
+    state["y0"] += random.uniform(-0.03, 0.03)
+
+    # subjective world
+    state["xs"] += random.uniform(-0.03, 0.03)
+    state["ys"] += random.uniform(-0.03, 0.03)
+
+    # delta
+    dx = state["x0"] - state["xs"]
+    dy = state["y0"] - state["ys"]
+    delta = math.sqrt(dx*dx + dy*dy)
+
+    # gamma
+    gamma = random.uniform(0, 1)
+
+    # entanglement entropy
+    p = [random.random() for _ in range(4)]
+    s = sum(p); p = [v/s for v in p]
+    S = -sum(pi * math.log(pi,2) for pi in p if pi > 0)
+
+    # mode
+    mode = "normal"
+    if abs(curv) > 0.05: mode = "BH"
+    if S > 1.5: mode = "high_entropy"
+
+    # fate
+    if state["a"] > 1.3 and curv < 0: fate = "Big Rip"
+    elif state["a"] < 0.7: fate = "Crunch"
+    else: fate = "Stable"
+
+    return {
+        "step": state["step"],
+        "t": state["t"], "a": state["a"], "curv": curv,
+        "x0": state["x0"], "y0": state["y0"],
+        "xs": state["xs"], "ys": state["ys"],
+        "delta": delta, "gamma": gamma, "S": S,
+        "mode": mode, "fate": fate
+    }
+
+# ---------- 記録 ----------
+def write_log(r):
+    with open(LOG_FILE, "a", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow([
+            datetime.utcnow().isoformat(),
+            r["step"], r["t"], r["a"], r["curv"],
+            r["x0"], r["y0"], r["xs"], r["ys"], r["delta"],
+            r["gamma"], r["S"], r["mode"], r["fate"]
+        ])
+
+# ---------- main ----------
+def main():
+    init_log()
+    r = step_universe()
+    write_log(r)
+
+if __name__ == "__main__":
+    main()
